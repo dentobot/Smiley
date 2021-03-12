@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>appointment@SmileyDentalClinic</title></head>
+<head><title>MAP@SmileyDentalClinic</title></head>
  
 <body>
  
@@ -11,13 +11,12 @@
   async function getUserProfile() {
    const profile = await liff.getProfile()
    window.location.replace(
-     `https://docs.google.com/forms/d/e/1FAIpQLSfRK4i9m_Dv8Dt3mdn7NJKgLKPwOsZ8rxBsPb2HkGBVOsdVag/viewform?usp=pp_url
-       &entry.2089218021=${profile.displayName}`
+     `https://g.page/Smiley8rew?share`
      );
    }
  
   async function main() {
-     await liff.init({ liffId: "1655727994-LP3qnzd5" })
+     await liff.init({ liffId: "1655748475-MevrQLAR" })
        if (liff.isLoggedIn()) {
          getUserProfile()
        } else {
