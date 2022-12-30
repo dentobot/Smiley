@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Social Security@SmileyDentalClinic</title></head>
+ 
+<body>
+ 
+<script src="https://static.line-scdn.net/liff/edge/versions/2.8.0/sdk.js"></script>
+ 
+<script>
+ 
+  async function getUserProfile() {
+   const profile = await liff.getProfile()
+   window.location.replace(
+     `https://docs.google.com/forms/d/e/1FAIpQLSfQ3EvElz0cBX1QxnhjUmiRmf2BBqia9WWVhCvDksSCDmSoQg/viewform?usp=pp_url
+       &entry.760972130=${profile.displayName}`
+     );
+   }
+ 
+  async function main() {
+     await liff.init({ liffId: "1655748475-W9MLb6dy" })
+       if (liff.isLoggedIn()) {
+         getUserProfile()
+       } else {
+         liff.login()
+       }
+   }
+   main()
+ </script>
+ 
+ </body>
+</html>
